@@ -1,0 +1,58 @@
+apiVersion: v1
+entries:
+  anki-exporter:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-06-24T15:33:52.697002122Z"
+    description: Inflections of arbitrary words for the russian language
+    digest: 329dd9724b68dd68c5efde971d40dbdeb68da4dc8f4043b0497392a2c0d0be03
+    name: anki-exporter
+    type: application
+    urls:
+    - anki-exporter-0.1.1.tgz
+    version: 0.1.1
+  grammr:
+  - apiVersion: v2
+    appVersion: 0.4.0
+    created: "2025-06-24T15:33:52.794022356Z"
+    description: A Helm chart for Kubernetes
+    digest: b4baeecf429089c5b4e5358a5cc400df3584f93b3c0ae8c9437250cf78918d55
+    name: grammr
+    type: application
+    urls:
+    - grammr-0.3.1.tgz
+    version: 0.3.1
+  inflection-ru:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2025-06-24T15:33:52.942368698Z"
+    description: Inflections of arbitrary words for the russian language
+    digest: e9c8b1ad5cb441c54572e3b1aace252967e14a03882bc7e008171f15ae85f586
+    name: inflection-ru
+    type: application
+    urls:
+    - inflection-ru-0.2.1.tgz
+    version: 0.2.1
+  morphology:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-06-24T15:33:53.087573394Z"
+    description: Morphological analysis of phrases using spaCy
+    digest: eacb9806c32db142dacc92bd2e661a8df4ae50ec3277452c79f21002cfed8b9a
+    name: morphology
+    type: application
+    urls:
+    - morphology-0.3.1.tgz
+    version: 0.3.1
+  multi-inflection:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2025-06-24T15:33:53.194144667Z"
+    description: Inflections of arbitrary words for the russian language
+    digest: 06977e5bcabef94099ae386faf0832e8049c75bbfaefd97f153a06b799d96ad3
+    name: multi-inflection
+    type: application
+    urls:
+    - multi-inflection-0.1.4.tgz
+    version: 0.1.4
+generated: "2025-06-24T15:33:53.194148604Z"
