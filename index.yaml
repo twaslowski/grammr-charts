@@ -33,6 +33,16 @@ entries:
     version: 0.1.1
   grammr:
   - apiVersion: v2
+    appVersion: 3.2.0
+    created: "2025-07-01T14:52:04.388262561Z"
+    description: grammr-core helm chart
+    digest: a285b92c4f4a103967907d307b0f3994dc4e1a3dcf6d7bfd12a7db55ac982482
+    name: grammr
+    type: application
+    urls:
+    - grammr-3.2.0.tgz
+    version: 3.2.0
+  - apiVersion: v2
     appVersion: 3.1.0
     created: "2025-07-01T14:25:36.054110019Z"
     description: grammr-core helm chart
@@ -135,4 +145,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-01T14:25:36.054133293Z"
+generated: "2025-07-01T14:52:04.388289362Z"
