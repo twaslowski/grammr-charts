@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   anki-exporter:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-07-01T14:11:15.713055143Z"
+    description: Export grammr decks to Anki file format
+    digest: 380183bae83dcee6de6e78716a757912a36eabe6c201e1338f2c6f32157591f7
+    name: anki-exporter
+    type: application
+    urls:
+    - anki-exporter-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2025-06-24T15:38:27.404588942Z"
     description: Export grammr decks to Anki file format
@@ -65,6 +75,16 @@ entries:
     version: 0.2.1
   morphology:
   - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2025-07-01T14:11:15.939210787Z"
+    description: Morphological analysis of phrases using spaCy
+    digest: a2a8c9347ca3712d1ae781683a632cbe5d14d124c51dc87923027ebd620070cb
+    name: morphology
+    type: application
+    urls:
+    - morphology-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2025-06-24T15:33:53.087573394Z"
     description: Morphological analysis of phrases using spaCy
@@ -76,6 +96,16 @@ entries:
     version: 0.3.1
   multi-inflection:
   - apiVersion: v2
+    appVersion: 0.2.2
+    created: "2025-07-01T14:11:16.037689987Z"
+    description: Inflections of arbitrary words for the russian language
+    digest: f8c94dedb37d8314b5714552893f4ab0cc478a44afd2e01380f6571964316dd6
+    name: multi-inflection
+    type: application
+    urls:
+    - multi-inflection-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     appVersion: 0.2.1
     created: "2025-06-24T15:33:53.194144667Z"
     description: Inflections of arbitrary words for the russian language
@@ -85,4 +115,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-06-24T15:38:27.588727348Z"
+generated: "2025-07-01T14:11:16.037717459Z"
