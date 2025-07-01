@@ -54,6 +54,16 @@ entries:
     version: 0.3.1
   inflection-ru:
   - apiVersion: v2
+    appVersion: 0.2.3
+    created: "2025-07-01T14:21:34.455730825Z"
+    description: Inflections of arbitrary words for romanian languages
+    digest: 0334bc627f36ffeef4c1facf4c9fbcef7370941686d6fe7b47981ce1c7b6654a
+    name: inflection-ru
+    type: application
+    urls:
+    - inflection-ru-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
     appVersion: 0.2.1
     created: "2025-06-24T15:38:27.588715104Z"
     description: Inflections of arbitrary words for romanian languages
@@ -115,4 +125,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-01T14:11:16.037717459Z"
+generated: "2025-07-01T14:21:34.455776751Z"
