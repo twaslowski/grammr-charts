@@ -43,6 +43,8 @@ spec:
                 secretKeyRef:
                   name: postgres
                   key: password
+            - name: OPENAI_API_KEY
+              value: {{ .Values.openai_api_key }}
           {{ with .Values.environmentVariables }}
           {{ toYaml . | nindent 12 }}
           {{- end }}
