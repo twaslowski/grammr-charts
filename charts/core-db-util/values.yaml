@@ -9,6 +9,8 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "3.2.1"
 
+database_connection_string: ""
+
 nameOverride: ""
 fullnameOverride: ""
 
