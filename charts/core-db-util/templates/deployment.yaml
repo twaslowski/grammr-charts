@@ -38,8 +38,13 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
-            - name: DB_CONNECTION_STRING
+            - name: DATABASE_HOST
               value: {{ .Values.database_connection_string }}
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: password
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{ toYaml . | nindent 12 }}
