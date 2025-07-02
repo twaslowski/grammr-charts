@@ -34,6 +34,16 @@ entries:
   core-db-util:
   - apiVersion: v2
     appVersion: 3.2.1
+    created: "2025-07-02T10:40:11.287197601Z"
+    description: A Helm chart for Kubernetes
+    digest: 5f374c085209bd54a3466a64eede74eb08519509b67f6c88470e653244176552
+    name: core-db-util
+    type: application
+    urls:
+    - core-db-util-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 3.2.1
     created: "2025-07-02T10:30:28.536147354Z"
     description: A Helm chart for Kubernetes
     digest: ffe745ba96fc38b6e348c19262f66f2e8f7a60a05f8af6dd1b610c3ccaebff34
@@ -196,4 +206,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-02T10:30:28.536181267Z"
+generated: "2025-07-02T10:40:11.287236104Z"
