@@ -39,7 +39,7 @@ spec:
               protocol: TCP
           env:
             - name: DB_CONNECTION_STRING
-              valueFrom: {{ .Values.database_connection_string }}
+              value: {{ .Values.database_connection_string }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{ toYaml . | nindent 12 }}
