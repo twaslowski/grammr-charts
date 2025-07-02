@@ -78,3 +78,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false
