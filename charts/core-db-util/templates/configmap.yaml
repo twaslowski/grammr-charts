@@ -8,3 +8,22 @@ data:
     databases:
       grammr:
         dsn: !env DB_CONNECTION_STRING
+    metrics:
+      active_anonymous_user_count:
+        type: gauge
+        description: Number of currently anonymous users in the system
+      migrated_anonymous_user_count:
+        type: gauge
+        description: Number of anonymous users that have been migrated to registered users
+
+    queries:
+      active_anonymous_user_count:
+        databases: [grammr]
+        interval: 1h
+        metrics: [ active_anonymous_user_count ]
+        sql: SELECT COUNT(*) AS active_anonymous_user_count FROM "grammr"."user" WHERE is_anonymous = true AND deleted = false;
+      migrated_anonymous_user_count:
+        databases: [ grammr ]
+        interval: 1h
+        metrics: [ migrated_anonymous_user_count ]
+        sql: SELECT COUNT(*) AS migrated_anonymous_user_count FROM "grammr"."user" WHERE is_anonymous = true AND deleted = true;
