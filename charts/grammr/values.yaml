@@ -15,9 +15,8 @@ nameOverride: ""
 fullnameOverride: ""
 
 openai_api_key: ""
-allowedOrigin: "localhost"
-environment: ""
-datasource_url: ""
+
+environmentVariables: []
 
 languages: []
 

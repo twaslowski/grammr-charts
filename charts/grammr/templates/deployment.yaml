@@ -43,14 +43,9 @@ spec:
                 secretKeyRef:
                   name: postgres
                   key: password
-            - name: OPENAI_API_KEY
-              value: {{ .Values.openai_api_key }}
-            - name: DATASOURCE_URL
-              value: {{ .Values.datasource_url }}
-            - name: ALLOWED_ORIGIN
-              value: {{ .Values.allowedOrigin }}
-            - name: SPRING_PROFILES_ACTIVE
-              value: {{ .Values.environment }}
+          {{ with .Values.environmentVariables }}
+          {{ toYaml . | nindent 12 }}
+          {{- end }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:

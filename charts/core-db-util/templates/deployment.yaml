@@ -39,7 +39,7 @@ spec:
               protocol: TCP
           env:
             - name: DATABASE_HOST
-              value: {{ .Values.database_connection_string }}
+              value: {{ .Values.database_host }}
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
