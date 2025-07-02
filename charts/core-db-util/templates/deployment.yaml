@@ -3,40 +3,34 @@ kind: Deployment
 metadata:
   name: {{ include "core-db-util.fullname" . }}
   labels:
-    {{- include "core-db-util.labels" . | nindent 4 }}
+    {{ include "core-db-util.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  {{- end }}
   selector:
     matchLabels:
-      {{- include "core-db-util.selectorLabels" . | nindent 6 }}
+      {{ include "core-db-util.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "core-db-util.labels" . | nindent 8 }}
+        {{ include "core-db-util.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       serviceAccountName: {{ include "core-db-util.serviceAccountName" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.securityContext }}
           securityContext:
-            {{- toYaml . | nindent 12 }}
+            {{ toYaml . | nindent 12 }}
           {{- end }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
@@ -46,39 +40,39 @@ spec:
               protocol: TCP
           {{- with .Values.livenessProbe }}
           livenessProbe:
-            {{- toYaml . | nindent 12 }}
+            {{ toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.readinessProbe }}
           readinessProbe:
-            {{- toYaml . | nindent 12 }}
+            {{ toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.resources }}
           resources:
-            {{- toYaml . | nindent 12 }}
+            {{ toYaml . | nindent 12 }}
           {{- end }}
           volumeMounts:
             - name: exporter-config-volume
               mountPath: /config
               readOnly: true
           {{- with .Values.volumeMounts }}
-          {{- toYaml . | nindent 12 }}
+          {{ toYaml . | nindent 12 }}
           {{- end }}
       volumes:
         - name: exporter-config-volume
           configMap:
             name: {{ include "core-db-util.fullname" . }}-exporter-configmap
         {{- with .Values.volumes }}
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
         {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.affinity }}
       affinity:
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.tolerations }}
       tolerations:
-        {{- toYaml . | nindent 8 }}
+        {{ toYaml . | nindent 8 }}
       {{- end }}
