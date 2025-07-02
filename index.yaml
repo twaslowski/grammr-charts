@@ -34,6 +34,16 @@ entries:
   core-db-util:
   - apiVersion: v2
     appVersion: 3.2.1
+    created: "2025-07-02T12:04:19.659974457Z"
+    description: A Helm chart for Kubernetes
+    digest: ba4f1c927cdaf0619c9eae7af20829d266b48ca415107df0a92d561604ac1af0
+    name: core-db-util
+    type: application
+    urls:
+    - core-db-util-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
+    appVersion: 3.2.1
     created: "2025-07-02T11:04:25.900262784Z"
     description: A Helm chart for Kubernetes
     digest: 568d71fb1c35befc9b5c61f050964e846543d3a15121d51721a1507db4619f4e
@@ -123,6 +133,16 @@ entries:
     - core-db-util-0.1.0.tgz
     version: 0.1.0
   grammr:
+  - apiVersion: v2
+    appVersion: 3.2.0
+    created: "2025-07-02T12:04:19.780313038Z"
+    description: grammr-core helm chart
+    digest: 61e80a3bd7f94a8c6373c2465789ca48de95d23e316d5e217073144102a4307d
+    name: grammr
+    type: application
+    urls:
+    - grammr-3.3.0.tgz
+    version: 3.3.0
   - apiVersion: v2
     appVersion: 3.2.0
     created: "2025-07-02T10:17:41.700694432Z"
@@ -246,4 +266,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-02T11:04:25.900315014Z"
+generated: "2025-07-02T12:04:19.780400291Z"
