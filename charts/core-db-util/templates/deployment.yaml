@@ -21,7 +21,6 @@ spec:
         {{ toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      serviceAccountName: {{ include "core-db-util.serviceAccountName" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
         {{ toYaml . | nindent 8 }}
