@@ -21,7 +21,7 @@ environmentVariables: []
 languages: []
 
 podAnnotations:
-  fluentbit.io/parser: java
+  fluentbit.io/parser: java-multiline
 
 podLabels: {}
 
