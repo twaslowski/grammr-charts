@@ -12,11 +12,13 @@ spec:
     - host: {{ .Values.ingress.host }}
       http:
         paths:
+          {{- range .Values.ingress.paths }}
           - backend:
               service:
-                name: {{ include "grammr-core.fullname" . }}
+                name: {{ include "grammr-core.fullname" $ }}
                 port:
-                  number: {{ .Values.service.port }}
-            path: {{ .Values.ingress.path }}
+                  number: {{ $.Values.service.port }}
+            path: {{ . }}
             pathType: Prefix
+          {{- end }}
 {{ end }}
