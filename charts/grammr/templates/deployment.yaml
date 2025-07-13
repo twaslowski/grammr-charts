@@ -38,11 +38,6 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
-            - name: DATASOURCE_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: password
             - name: OPENAI_API_KEY
               value: {{ .Values.openai_api_key }}
           {{ with .Values.environmentVariables }}
