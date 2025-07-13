@@ -15,6 +15,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 openai_api_key: ""
+clerkJwtPublicKey: ""
 
 environmentVariables: []
 

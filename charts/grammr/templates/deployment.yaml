@@ -38,6 +38,8 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
+            - name: CLERK_JWT_PUBLIC_KEY
+              value: {{ .Values.clerkJwtPublicKey }}
             - name: OPENAI_API_KEY
               value: {{ .Values.openai_api_key }}
           {{ with .Values.environmentVariables }}
