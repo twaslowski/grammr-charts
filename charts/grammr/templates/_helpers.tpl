@@ -48,7 +48,6 @@ Selector labels
 {{- define "grammr-core.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "grammr-core.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
-app.kubernetes.io/version: {{ .Chart.AppVersion }}
 app.kubernetes.io/part-of: grammr
 {{- end }}
 
