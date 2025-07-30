@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   anki-exporter:
   - apiVersion: v2
+    appVersion: 0.3.1
+    created: "2025-07-30T11:48:21.482343025Z"
+    description: Export grammr decks to Anki file format
+    digest: 6e49a75b6d0ac4a29f5af4b86ea53e7ed44d8b1e353fa3cc00080c6e44ac6eca
+    name: anki-exporter
+    type: application
+    urls:
+    - anki-exporter-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
     appVersion: 0.3.0
     created: "2025-07-30T08:34:58.777946222Z"
     description: Export grammr decks to Anki file format
@@ -416,4 +426,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-30T08:34:58.778042672Z"
+generated: "2025-07-30T11:48:21.482447222Z"
