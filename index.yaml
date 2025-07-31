@@ -152,6 +152,17 @@ entries:
     urls:
     - core-db-util-0.1.0.tgz
     version: 0.1.0
+  db-monitor:
+  - apiVersion: v2
+    appVersion: 3.2.1
+    created: "2025-07-31T14:33:23.730969348Z"
+    description: A Helm chart for Kubernetes
+    digest: ab4f27eef0f38f06d24ece8645659465ee9644ac856610720dd72b128da08d80
+    name: db-monitor
+    type: application
+    urls:
+    - db-monitor-0.4.0.tgz
+    version: 0.4.0
   grammr:
   - apiVersion: v2
     appVersion: 3.7.0
@@ -436,4 +447,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-30T14:45:49.205289159Z"
+generated: "2025-07-31T14:33:23.731070828Z"
