@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "core-db-util.fullname" . }}
+  name: {{ include "db-monitor.fullname" . }}
   labels:
-    {{ include "core-db-util.labels" . | nindent 4 }}
+    {{ include "db-monitor.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{ include "core-db-util.selectorLabels" . | nindent 6 }}
+      {{ include "db-monitor.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{ toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{ include "core-db-util.labels" . | nindent 8 }}
+        {{ include "db-monitor.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{ toYaml . | nindent 8 }}
         {{- end }}
@@ -38,13 +38,11 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
-            - name: DATABASE_HOST
-              value: {{ .Values.database_host }}
-            - name: DATABASE_PASSWORD
+            - name: DATABASE_DSN
               valueFrom:
                 secretKeyRef:
-                  name: postgres
-                  key: password
+                  name: {{ .Values.database.secretName }}
+                  key: {{ .Values.database.secretKey }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{ toYaml . | nindent 12 }}
@@ -67,7 +65,7 @@ spec:
       volumes:
         - name: exporter-config-volume
           configMap:
-            name: {{ include "core-db-util.fullname" . }}-exporter-configmap
+            name: {{ include "db-monitor.fullname" . }}-exporter-configmap
         {{- with .Values.volumes }}
         {{ toYaml . | nindent 8 }}
         {{- end }}

@@ -1,19 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "core-db-util.fullname" . }}-exporter-configmap
+  name: {{ include "db-monitor.fullname" . }}-exporter-configmap
   namespace: {{ .Release.Namespace }}
 data:
   config.yaml: |-
     databases:
       grammr:
-        dsn:
-          dialect: postgresql
-          user: grammr
-          password: !env DATABASE_PASSWORD
-          host: !env DATABASE_HOST
-          port: 5432
-          database: grammr
+        dsn: !env DATABASE_DSN
     metrics:
       active_anonymous_user_count:
         type: gauge

@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "core-db-util.name" -}}
+{{- define "db-monitor.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "core-db-util.fullname" -}}
+{{- define "db-monitor.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "core-db-util.chart" -}}
+{{- define "db-monitor.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "core-db-util.labels" -}}
-helm.sh/chart: {{ include "core-db-util.chart" . }}
-{{ include "core-db-util.selectorLabels" . }}
+{{- define "db-monitor.labels" -}}
+helm.sh/chart: {{ include "db-monitor.chart" . }}
+{{ include "db-monitor.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "core-db-util.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "core-db-util.name" . }}
+{{- define "db-monitor.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "db-monitor.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "core-db-util.serviceAccountName" -}}
+{{- define "db-monitor.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "core-db-util.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "db-monitor.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
