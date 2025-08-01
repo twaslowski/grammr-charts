@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   anki-exporter:
   - apiVersion: v2
+    appVersion: 0.4.0
+    created: "2025-08-01T17:07:34.613852723Z"
+    description: Export grammr decks to Anki file format
+    digest: 262c2c4498fde70807071a9897bc58164e2440c04c61d6fdf2b3d13a28bd8345
+    name: anki-exporter
+    type: application
+    urls:
+    - anki-exporter-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 0.3.1
     created: "2025-07-30T11:48:21.482343025Z"
     description: Export grammr decks to Anki file format
@@ -164,6 +174,16 @@ entries:
     - db-monitor-0.4.0.tgz
     version: 0.4.0
   grammr:
+  - apiVersion: v2
+    appVersion: 3.8.0
+    created: "2025-08-01T17:07:34.805905701Z"
+    description: grammr-core helm chart
+    digest: 8a9348cbe12cb4cb1c30bcd6294e5efbbd660db4c09e277eba632f03d053560a
+    name: grammr
+    type: application
+    urls:
+    - grammr-3.9.0.tgz
+    version: 3.9.0
   - apiVersion: v2
     appVersion: 3.7.0
     created: "2025-07-30T14:45:49.205037956Z"
@@ -376,6 +396,16 @@ entries:
     version: 0.3.1
   inflection-ru:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2025-08-01T17:07:34.97163781Z"
+    description: Inflections of arbitrary words for romanian languages
+    digest: 26ae8f088c077ec726216c4a0e4e7faec19db36f2c1d924528e906e0f1a9e403
+    name: inflection-ru
+    type: application
+    urls:
+    - inflection-ru-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.2.3
     created: "2025-07-01T14:21:34.455730825Z"
     description: Inflections of arbitrary words for romanian languages
@@ -407,6 +437,16 @@ entries:
     version: 0.2.1
   morphology:
   - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2025-08-01T17:07:35.23640207Z"
+    description: Morphological analysis of phrases using spaCy
+    digest: 93af236a3d49c428cff3710f0ae7ad3f7a28874c6bcf2e3ca5a3f41ff26510b0
+    name: morphology
+    type: application
+    urls:
+    - morphology-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2025-07-01T14:11:15.939210787Z"
     description: Morphological analysis of phrases using spaCy
@@ -428,6 +468,16 @@ entries:
     version: 0.3.1
   multi-inflection:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2025-08-01T17:07:35.422303856Z"
+    description: Inflections of arbitrary words for the russian language
+    digest: 002ac56262c255fb68dcce4ca334935252eb3af31a48b6c0b90ef51a009410ef
+    name: multi-inflection
+    type: application
+    urls:
+    - multi-inflection-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.2.2
     created: "2025-07-01T14:11:16.037689987Z"
     description: Inflections of arbitrary words for the russian language
@@ -447,4 +497,4 @@ entries:
     urls:
     - multi-inflection-0.1.4.tgz
     version: 0.1.4
-generated: "2025-07-31T14:33:23.731070828Z"
+generated: "2025-08-01T17:07:35.422537762Z"
